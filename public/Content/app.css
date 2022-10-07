@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Nav */
+.logo {
+  width: 10rem;
+}
+
+nav li {
+  font-size: 2rem;
+}
