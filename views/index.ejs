@@ -1,11 +1,11 @@
-<%- include partials/header.ejs %>
-<%- include partials/main_nav.ejs %>
-    <!-- Main Content -->
-    <main class="container">
-      <div class="jumbotron">
-        <h1 class="display-4">Weclome to the <%= title %> page</h1>      
-      </div>
-    </main>
-    
-<%- include partials/bottom_nav.ejs %>
-<%- include partials/footer.ejs %>
+<%- include partials/header.ejs %> <%- include partials/main_nav.ejs %>
+<!-- Main Content -->
+
+<% if (title == "About Me"){%> <%- include partials/aboutme.ejs %> <%}else if
+(title == "Projects Page"){%> <%- include partials/projects.ejs %> <% }else if
+(title == "Services Page"){ %> <%- include partials/services.ejs %> <%} else if
+(title == "Contact Me") {%> <%- include partials/contact.ejs %> <% } else if
+(title == "Homepage"){%> <%- include partials/homepage.ejs %> <%};%>
+
+
+<%- include partials/bottom_nav.ejs %> <%- include partials/footer.ejs %>
