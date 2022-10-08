@@ -1,6 +1,5 @@
 let express = require("express");
 let router = express.Router();
-let alert = require("alert");
 /* GET home page. */
 router.get("/", function (req, res, next) {
   res.render("index", { title: "Homepage" });
@@ -27,9 +26,8 @@ router.get("/contact", (req, res) => {
 });
 
 router.get("/respone", (req, res) => {
-  let { fullname } = req.query;
-  console.log(`Thanks ${fullname} for contact me.`);
-  alert(`Thanks ${fullname} for contact me.`);
+  let { fullname, age, email, message, phone } = req.query;
+  console.log(`${fullname}, ${age}, ${email}, ${phone}, ${message}`);
   res.render("index", { title: "Homepage" });
 });
 
